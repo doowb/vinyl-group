@@ -18,7 +18,7 @@ var VinylGroup = require('vinyl-group');
 
 ## API
 
-### [VinylGroup](index.js#L30)
+### [VinylGroup](index.js#L29)
 
 Create an instance of `VinylGroup`. Pass in a group from [group-array](https://github.com/doowb/group-array) to store.
 
