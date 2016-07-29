@@ -1,7 +1,6 @@
 'use strict';
 
-var Base = require('base');
-var Vinyl = require('vinyl');
+var utils = require('./utils');
 
 /**
  * Expose `VinylGroup`
@@ -33,19 +32,17 @@ function VinylGroup(group) {
   }
 
   if (!group) group = {};
-  Vinyl.call(this);
-  Base.call(this);
+  utils.File.call(this);
 
-  this.is('VinylGroup');
+  is(this, 'VinylGroup');
   this.group = group;
 }
 
 /**
- * Inherit `Base` and `Vinyl`
+ * Inherit `Vinyl`
  */
 
-Base.extend(VinylGroup);
-Base.inherit(VinylGroup, Vinyl);
+utils.cu.inherit(VinylGroup, utils.File);
 
 /**
  * Override the vinyl `inspect` method.
@@ -69,4 +66,16 @@ VinylGroup.prototype.inspect = function() {
   }
 
   return '<' + name + ' ' + inspect.join(' ') + '>';
+};
+
+/**
+ * Set the name and type of object.
+ */
+
+function is(obj, name) {
+  if (typeof name !== 'string') {
+    throw new TypeError('expected name to be a string');
+  }
+  utils.define(obj, 'is' + utils.pascal(name), true);
+  utils.define(obj, '_name', name);
 };

@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -20,7 +21,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "base": "^0.11.1",
+    "class-utils": "^0.3.4",
+    "define-property": "^0.2.5",
+    "lazy-cache": "^2.0.1",
+    "pascalcase": "^0.1.1",
     "vinyl": "^1.2.0"
   },
   "devDependencies": {
