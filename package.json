@@ -9,25 +9,33 @@
     "url": "https://github.com/doowb/vinyl-group/issues"
   },
   "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [
-    "group",
-    "vinyl"
-  ],
+  "dependencies": {
+    "base": "^0.11.1",
+    "vinyl": "^1.2.0"
+  },
   "devDependencies": {
     "group-array": "^0.3.1",
     "gulp-format-md": "^0.1.9",
     "mocha": "^2.5.3"
   },
-  "dependencies": {
-    "base": "^0.11.1",
-    "vinyl": "^1.2.0"
-  },
+  "keywords": [
+    "array",
+    "group",
+    "group-array",
+    "gulp",
+    "vinyl",
+    "vinyl-group"
+  ],
   "verb": {
     "toc": false,
     "layout": "default",
@@ -45,11 +53,11 @@
       ]
     },
     "reflinks": [
+      "group-array",
       "gulp",
       "verb",
       "verb-generate-readme",
-      "vinyl",
-      "group-array"
+      "vinyl"
     ],
     "lint": {
       "reflinks": true
