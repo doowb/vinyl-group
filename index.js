@@ -13,9 +13,17 @@ module.exports = exports = VinylGroup;
  * Create an instance of `VinylGroup`. Pass in a group from [group-array][] to store.
  *
  * ```js
- * var group = new VinylGroup(groupArray(files, 'data.tags'));
+ * var files = [ ... ]; // array of vinyl files
+ * var group = groupArray(files, 'data.tags');
+ * var vinylGroup = new VinylGroup(group);
+ *
+ * console.log(vinylGroup.group === group);
+ * //=> true
+ *
+ * console.log(vinylGroup);
+ * //=> <VinylGroup ["foo (3)", "bar (3)"]>
  * ```
- * @param {Object} `group`
+ * @param {Object} `group` A group object created by passing an array of [vinyl][] file into [group-array][].
  * @api public
  */
 

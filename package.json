@@ -1,6 +1,6 @@
 {
   "name": "vinyl-group",
-  "description": "Vinyl object that contains a groups of vinyl objects created with group-array.",
+  "description": "Vinyl object that contains groups of vinyl objects created with group-array.",
   "version": "0.1.0",
   "homepage": "https://github.com/doowb/vinyl-group",
   "author": "Brian Woodward (https://github.com/doowb)",
@@ -21,10 +21,38 @@
   ],
   "devDependencies": {
     "group-array": "^0.3.1",
+    "gulp-format-md": "^0.1.9",
     "mocha": "^2.5.3"
   },
   "dependencies": {
     "base": "^0.11.1",
     "vinyl": "^1.2.0"
+  },
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "group-array",
+        "gulp",
+        "vinyl"
+      ]
+    },
+    "reflinks": [
+      "gulp",
+      "verb",
+      "verb-generate-readme",
+      "vinyl",
+      "group-array"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
